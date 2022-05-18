@@ -21,12 +21,14 @@ const handleOnChange = (event) => {
     const handleOnClick = (event) => {
         event.preventDefault();
         axios
-            .post("https://localhost:8080/app/user/signin", user)
+            .post("https://empmanagement-backend.vercel.app/admin/signin", user)
             .then((res) => {
                 // setToken(response.data.token);
                 // setAdmin(response.data.admin);
                 // navigate(`/admin/dashboard`);
-                console.log(res.data)
+                if (res.data) {
+                    alert('Signin Sucessfull');
+                }
 
             })
             .catch(function (error) {
@@ -48,7 +50,7 @@ const handleOnChange = (event) => {
                         Email
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control onChange={handleOnChange} type="email" placeholder="Email" />
+                        <Form.Control name="email" onChange={handleOnChange} type="email" placeholder="Email" />
 
                     </Col>
                 </Form.Group>
@@ -58,7 +60,7 @@ const handleOnChange = (event) => {
                         Password
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control type="password" placeholder="Password" onChange={handleOnChange} />
+                        <Form.Control name="password" type="password" placeholder="Password" onChange={handleOnChange} />
 
                     </Col>
                 </Form.Group>
@@ -81,4 +83,4 @@ const handleOnChange = (event) => {
 //         setAdmin: (admin) => dispatch(setAdmin(admin)),
 //     };
 // };
-export default (AdminSignin);
+export default AdminSignin;

@@ -14,10 +14,10 @@ const AdminDashboard = () => {
   const [employee, setEmployee] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get('http://localhost:8080/admin/getall').then(res => setEmployee(res.data));
+    axios.get('https://empmanagement-backend.vercel.app/admin/getall').then(res => setEmployee(res.data));
   })
   const deleteEmployee = (id) => {
-    axios.delete(`http://localhost:/8080/admin/delete/${employee._id}`).then(res => console.log(res.data))
+    axios.delete(`https://empmanagement-backend.vercel.app/admin/delete/${employee._id}`).then(res => console.log(res.data))
   }
   return (
       <>
@@ -34,9 +34,9 @@ const AdminDashboard = () => {
           title="click here to signup and signin"
           menuVariant="dark"
         >
-          <NavDropdown.Item href="/AdminSignup">signup</NavDropdown.Item>
+          <NavDropdown.Item><Link to="/AdminSignup">signup</Link></NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item href="/AdminSignin">signin</NavDropdown.Item>
+          <NavDropdown.Item><Link to="/AdminSignin">signin</Link></NavDropdown.Item>
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>

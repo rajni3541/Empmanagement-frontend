@@ -19,7 +19,7 @@ const  EmpSignup = () => {
     }
 
     const handleOnClick=  ()  =>{
-        const url = 'http://localhost:8080/employee/signup';
+        const url = 'https://empmanagement-backend.vercel.app/employee/signup';
         axios.post(url,user)
         .then((response) => {
             console.log(response.data);

@@ -24,7 +24,7 @@ const AddEmployee = ({ getToken }) => {
     event.preventDefault();
     axios
       .post(
-        "https://employee-management-system-backend.vercel.app/admin/add",
+        "https://empmanagement-backend.vercel.app/admin/add",
         input,
         {
           headers: {

@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const DisplayUser = ({ getUsers}) => {
   useEffect(() => {
-    const url = "https://admin-backend/app/user/getall"
+    const url = "https://empmanagement-backend.vercel.app/app/user/getall"
     const config = {
       headers: {
         "auth-token": getUsers,

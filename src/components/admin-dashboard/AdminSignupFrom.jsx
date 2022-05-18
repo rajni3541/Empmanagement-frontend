@@ -20,7 +20,7 @@ const  AdminSignup = () => {
 
     const handleOnClick= ()  =>{
         // axios.post('https://localhost:8080/app/user/register',user)
-        const url = 'http://localhost:8080/app/user/register';
+        const url = 'https://empmanagement-backend.vercel.app/admin/signup';
         axios.post(url,user)
         .then( (response) => {
             console.log(response.data);
@@ -55,7 +55,7 @@ const  AdminSignup = () => {
                         Name
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control onChange={handleOnChange} type="Name" placeholder="Name" />
+                        <Form.Control name="name" onChange={handleOnChange} type="Name" placeholder="Name" />
                         
                     </Col>
                 </Form.Group>
@@ -64,7 +64,7 @@ const  AdminSignup = () => {
                         Email
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control onChange={handleOnChange} type="email" placeholder="Email" />
+                        <Form.Control name="email" onChange={handleOnChange} type="email" placeholder="Email" />
                         
                     </Col>
                 </Form.Group>
@@ -74,7 +74,7 @@ const  AdminSignup = () => {
                         Password
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control onChange={handleOnChange} type="password" placeholder="Password" />
+                        <Form.Control name="password" onChange={handleOnChange} type="password" placeholder="Password" />
                         
                     </Col>
                 </Form.Group>
@@ -84,7 +84,7 @@ const  AdminSignup = () => {
                         ConfirmPassword
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control onChange={handleOnChange} type="password" placeholder="Password" />
+                        <Form.Control name="confirmPassword" onChange={handleOnChange} type="password" placeholder="Password" />
                         
                     </Col>
                 </Form.Group>

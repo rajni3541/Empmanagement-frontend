@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/navbar'
 import Container from 'react-bootstrap/Container'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Nav from 'react-bootstrap/nav'
+import { Link } from 'react-router-dom'
 
 
 
@@ -26,11 +27,13 @@ import Nav from 'react-bootstrap/nav'
           title="click here to signup and signin"
           menuVariant="dark"
         >
-          <NavDropdown.Item href="/EmployeSignup">Signup</NavDropdown.Item>
+          <NavDropdown.Item href="/EmployeSignup">
+            <Link to="/EmployeSignup">Signup</Link>
+          </NavDropdown.Item>
           {/* <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> */}
           <NavDropdown.Divider />
-          <NavDropdown.Item href="EmployeSignin">Signin</NavDropdown.Item>
+          <NavDropdown.Item href="EmployeSignin"><Link to="EmployeSignin">Signin</Link></NavDropdown.Item>
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>
