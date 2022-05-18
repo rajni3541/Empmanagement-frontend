@@ -6,7 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Nav from 'react-bootstrap/nav'
 // import Button from 'react-bootstrap/button'
 import { Link, useNavigate } from 'react-router-dom'
-import { Button } from 'react-bootstrap'
+import Button  from 'react-bootstrap/Button'
 import axios from 'axios'
 // import { Link } from 'react-router-dom'
 
@@ -49,10 +49,7 @@ const AdminDashboard = () => {
         <h1><Link to="/EmpDashboard">GO TO EMPLOYEE-DASHBOARD</Link></h1>
        
           
-        {/* <Button variant="primary" size="lg">
-       GO TO EMPLOYEE-DASHBOARD */}
-       {/* <Link to="/EmpDashboard"></Link> */}
-     {/* </Button> */}
+       
         
         
      </div>
