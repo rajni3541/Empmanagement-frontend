@@ -17,7 +17,7 @@ const AdminDashboard = () => {
     axios.get('http://localhost:8080/admin/getall').then(res => setEmployee(res.data));
   })
   const deleteEmployee = (id) => {
-    axios.delete(`http://localhost:/8080/admin/delete/${id}`).then(res => console.log(res.data))
+    axios.delete(`http://localhost:/8080/admin/delete/${employee._id}`).then(res => console.log(res.data))
   }
   return (
       <>
